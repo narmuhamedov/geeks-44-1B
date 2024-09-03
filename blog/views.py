@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-
+#fdsf
 def hello_view(request):
     return HttpResponse('Hello World')
 
