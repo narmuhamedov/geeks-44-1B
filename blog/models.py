@@ -27,6 +27,14 @@ class Post(models.Model):
         return f'{self.title} - {self.created_at}'
 
 
+class ReviewPost(models.Model):
+    post_review = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='review_post')
+    text_post = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.text_post} - {self.created_at}'
+
 
 
 

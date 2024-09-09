@@ -1,0 +1,14 @@
+.text_color{
+    color: violet;
+    text-align: center;
+}
+
+.square_mom {
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    flex-wrap: wrap; /* Если элементов много, они будут переноситься на новую строку */
+    min-height: 20vh; /* Минимальная высота контейнера, чтобы содержимое было по центру */
+    text-align: center;
+    gap: 10px;
+}
