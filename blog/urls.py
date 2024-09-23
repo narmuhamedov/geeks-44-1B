@@ -1,9 +1,11 @@
 from django.urls import path
 from . import views
 
+app_name = 'blog'
+
 urlpatterns = [
 
-    path('post_list/', views.PostListView.as_view(), name='post_list'),
+    path('', views.PostListView.as_view(), name='post_list'),
     path('post_list_delete/', views.PostListDeleteView.as_view(), name='post_list_delete'),
     path('post_list_edit/', views.PostUpdateListView.as_view(), name='post_list_edit'),
     path('post_list/<int:id>/delete/', views.PostDropDeleteView.as_view()),

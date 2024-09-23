@@ -11,7 +11,7 @@ class Post(models.Model):
     )
 
     title = models.CharField(max_length=255,
-                             verbose_name='enter title news')
+                             verbose_name='enter title news', db_index=True, null=True)
     image = models.ImageField(upload_to='post/',
                               verbose_name='download picture')
     description = models.TextField(verbose_name='white your news')
@@ -21,7 +21,7 @@ class Post(models.Model):
     # но в атрибуте нового поля, указываете null=True и заново проводите миграции (PS: даже если вы изменили название поля)
     like_or_dislike = models.CharField(max_length=100, choices=LIKE_OR_DISLIKE,
                                        null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True, null=True)
 
     def __str__(self):
         return f'{self.title} - {self.created_at}'
