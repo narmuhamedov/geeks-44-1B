@@ -8,6 +8,7 @@ urlpatterns = [
     path('', include('blog.urls')),
     path('', include('product.urls')),
     path('', include('users.urls')),
+    path('', include('parser.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,
